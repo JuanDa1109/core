@@ -4,19 +4,19 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'controllers/app_controller.dart';
-import 'services/core_repository.dart';
+import 'services/centra_repository.dart';
 import 'ui/dashboard_page.dart';
 import 'ui/import_page.dart';
 import 'ui/payments_page.dart';
 
-class CoreApp extends StatefulWidget {
-  const CoreApp({super.key});
+class CentraApp extends StatefulWidget {
+  const CentraApp({super.key});
 
   @override
-  State<CoreApp> createState() => _CoreAppState();
+  State<CentraApp> createState() => _CentraAppState();
 }
 
-class _CoreAppState extends State<CoreApp> {
+class _CentraAppState extends State<CentraApp> {
   late final AppController _controller;
   int _index = 0;
 
@@ -29,7 +29,7 @@ class _CoreAppState extends State<CoreApp> {
   @override
   void initState() {
     super.initState();
-    _controller = AppController(repository: CoreRepository());
+    _controller = AppController(repository: CentraRepository());
     _controller.initialize();
   }
 
@@ -51,7 +51,7 @@ class _CoreAppState extends State<CoreApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Core',
+      title: 'Centra',
       locale: const Locale('es', 'CO'),
       supportedLocales: const [Locale('es', 'CO'), Locale('es', 'ES')],
       localizationsDelegates: const [
@@ -198,7 +198,7 @@ class _CoreAppState extends State<CoreApp> {
                               child: Padding(
                                 padding: const EdgeInsets.all(7),
                                 child: SvgPicture.asset(
-                                  'assets/branding/core/ui/core_logomark.svg',
+                                  'assets/branding/centra/ui/centra_logomark.svg',
                                   colorFilter: const ColorFilter.mode(
                                     Colors.white,
                                     BlendMode.srcIn,
@@ -208,7 +208,7 @@ class _CoreAppState extends State<CoreApp> {
                             ),
                             const SizedBox(width: 8),
                             Text(
-                              'Core',
+                              'Centra',
                               style: Theme.of(context).textTheme.titleSmall
                                   ?.copyWith(
                                     color: const Color(0xFF1E3A5F),

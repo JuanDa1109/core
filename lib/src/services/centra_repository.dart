@@ -14,11 +14,11 @@ import 'package:sqflite/sqflite.dart';
 import '../domain/models.dart';
 import 'manifest_parser.dart';
 
-class CoreRepository {
-  CoreRepository({ManifestParser? parser})
+class CentraRepository {
+  CentraRepository({ManifestParser? parser})
     : _parser = parser ?? ManifestParser();
 
-  static const _dbName = 'core_stats.db';
+  static const _dbName = 'centra_stats.db';
 
   final ManifestParser _parser;
   Database? _db;
@@ -1258,7 +1258,7 @@ class CoreRepository {
     await backupDir.create(recursive: true);
 
     final backupName =
-        'core_backup_${DateFormat('yyyyMMdd_HHmmss').format(DateTime.now())}.db';
+        'centra_backup_${DateFormat('yyyyMMdd_HHmmss').format(DateTime.now())}.db';
     final backupPath = p.join(backupDir.path, backupName);
 
     await sourceFile.copy(backupPath);

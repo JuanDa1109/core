@@ -1,4 +1,4 @@
-name: core
+name: centra
 description: "A new Flutter project."
 publish_to: 'none'
 version: 1.0.0+1
@@ -36,21 +36,21 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/branding/core/ui/
+    - assets/branding/centra/ui/
 
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: assets/branding/core/app_icon/core_appicon_full.png
+  image_path: assets/branding/centra/app_icon/centra_appicon_full.png
   remove_alpha_ios: true
   min_sdk_android: 21
 
 flutter_native_splash:
   color: "0F4D45"
-  image: assets/branding/core/app_icon/core_appicon_foreground.png
+  image: assets/branding/centra/app_icon/centra_appicon_foreground.png
   android: true
   ios: true
   web: false
   android_12:
     color: "0F4D45"
-    image: assets/branding/core/app_icon/core_appicon_foreground.png
+    image: assets/branding/centra/app_icon/centra_appicon_foreground.png

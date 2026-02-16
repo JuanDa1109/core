@@ -1,4 +1,4 @@
-package com.duban.core
+package com.juan.centra
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../domain/models.dart';
-import '../services/core_repository.dart';
+import '../services/centra_repository.dart';
 
 class AppController extends ChangeNotifier {
-  AppController({required CoreRepository repository})
+  AppController({required CentraRepository repository})
     : _repository = repository;
 
-  final CoreRepository _repository;
+  final CentraRepository _repository;
 
   DashboardData _dashboard = DashboardData(liners: const [], closers: const []);
   List<ImportHistoryItem> _imports = const [];

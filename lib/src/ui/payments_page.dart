@@ -126,15 +126,15 @@ class _PaymentsPageState extends State<PaymentsPage> {
   }
 
   Future<void> _search() async {
-    final core = _queryController.text.trim();
-    if (core.isEmpty) return;
-    final normalized = 'CTB$core';
+    final contractDigits = _queryController.text.trim();
+    if (contractDigits.isEmpty) return;
+    final normalized = 'CTB$contractDigits';
 
     setState(() => _busy = true);
     try {
       var results = await widget.controller.searchContracts(normalized);
       if (results.isEmpty) {
-        results = await widget.controller.searchContracts(core);
+        results = await widget.controller.searchContracts(contractDigits);
       }
       setState(() {
         _results = results;
